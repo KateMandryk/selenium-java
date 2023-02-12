@@ -16,7 +16,6 @@ public class Singleton {
         if (driver == null) {
             BrowserFactory browserFactory = new BrowserFactory();
             driver = browserFactory.getWebDriver();
-
         }
         return driver;
     }
@@ -25,12 +24,6 @@ public class Singleton {
         if (driver != null) {
             log.info("Closing browser");
             driver.quit();
-
         }
-
     }
 }
-
-
-
-

@@ -5,7 +5,7 @@ import forms.base.BaseForm;
 import forms.base.Button;
 
 public class BrowserWindowsPage extends BaseForm {
-    private static By locator=By.className("main-header");
+    private static By locator=By.xpath("//div[contains(@class,'main-header') and contains(text(),'Browser')]");
     private static String name="BrowserWindowsPage";
     private Button btnTab=new Button(By.id("tabButton"),"Button tab");
 
@@ -15,9 +15,7 @@ public class BrowserWindowsPage extends BaseForm {
     }
 
     public void clickTabButton(){
+
         btnTab.click();
-
     }
-
-
 }

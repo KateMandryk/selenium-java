@@ -18,7 +18,6 @@ public class WebTablesPage extends BaseForm {
     private final Button btnDelete = new Button(By.id("delete-record-4"), "Button Delete");
     private final TextBox numberOfUser = new TextBox(By.xpath("//div[@class='rt-td']//div[last()]"), "NumberOfUser");
 
-
     public WebTablesPage() {
         super(locator,name);
 
@@ -56,10 +55,4 @@ public class WebTablesPage extends BaseForm {
         user.setDepartment(cellTable.get(5).getText());
         return user;
     }
-
 }
-
-
-
-
-

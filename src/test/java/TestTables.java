@@ -1,16 +1,16 @@
+import forms.app.ElementsPage;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import forms.app.ElementsPage;
 import forms.app.MainPage;
 import forms.app.RegistrationForm;
 import forms.app.WebTablesPage;
 import utils.FileReaderUtils;
-
 import java.io.IOException;
 
 
 public class TestTables extends BaseTest {
+    private final int indexUser=3;
 
     @DataProvider(name = "User")
     public static Object[][] getData() {
@@ -27,7 +27,7 @@ public class TestTables extends BaseTest {
                 },
                 {reader.getUser().get(indexUser2).getName(),
                         reader.getUser().get(indexUser2).getLastName(),
-                        reader.getUser().get(indexUser1).getEmail(),
+                        reader.getUser().get(indexUser2).getEmail(),
                         reader.getUser().get(indexUser2).getAge(),
                         reader.getUser().get(indexUser2).getSalary(),
                         reader.getUser().get(indexUser2).getDepartment()
@@ -56,18 +56,15 @@ public class TestTables extends BaseTest {
         form.typeDepartment(department);
         form.clickSubmit();
         int numberOfUsers = webTablesPage.getNumberOfUsers();
-        String userName = webTablesPage.getTable().get(3).getName();
-        Assert.assertEquals(webTablesPage.getTable().get(3).getName(), name, "FirstName has not appeared in a table");
-        Assert.assertEquals(webTablesPage.getTable().get(3).getLastName(), lastName, "LastName has not appeared in a table");
-        Assert.assertEquals(webTablesPage.getTable().get(3).getAge(), age, "Email has not appeared in a table");
-        Assert.assertEquals(webTablesPage.getTable().get(3).getEmail(), email, "Age has not appeared in a table");
-        Assert.assertEquals(webTablesPage.getTable().get(3).getSalary(), salary, "Salary has not appeared in a table");
-        Assert.assertEquals(webTablesPage.getTable().get(3).getDepartment(), department, "Department has not appeared in a table");
+        String userName = webTablesPage.getTable().get(indexUser).getName();
+        Assert.assertEquals(webTablesPage.getTable().get(indexUser).getName(), name, "FirstName has not appeared in a table");
+        Assert.assertEquals(webTablesPage.getTable().get(indexUser).getLastName(), lastName, "LastName has not appeared in a table");
+        Assert.assertEquals(webTablesPage.getTable().get(indexUser).getAge(), age, "Email has not appeared in a table");
+        Assert.assertEquals(webTablesPage.getTable().get(indexUser).getEmail(), email, "Age has not appeared in a table");
+        Assert.assertEquals(webTablesPage.getTable().get(indexUser).getSalary(), salary, "Salary has not appeared in a table");
+        Assert.assertEquals(webTablesPage.getTable().get(indexUser).getDepartment(), department, "Department has not appeared in a table");
         webTablesPage.clickButtonDelete();
         Assert.assertNotEquals(numberOfUsers, webTablesPage.getNumberOfUsers(), "After deleting a user, the number of records in the table has not changed.");
-        Assert.assertNotEquals(webTablesPage.getTable().get(3).getName(), userName, "User information has not deleted");
-
+        Assert.assertNotEquals(webTablesPage.getTable().get(indexUser).getName(), userName, "User information has not deleted");
     }
-
-
 }

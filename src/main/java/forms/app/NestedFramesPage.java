@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import forms.base.BaseForm;
 import utils.Singleton;
 
+import static utils.Singleton.getWebDriverInstance;
+
 public class NestedFramesPage extends BaseForm {
     private static final By locator = By.className("main-header");
     private static final String name = "Nested Frames";
@@ -18,15 +20,15 @@ public class NestedFramesPage extends BaseForm {
     }
 
     public String getMassageParentFrame() {
-        WebElement parentFrame = Singleton.getWebDriverInstance().findElement(frame);
-        Singleton.getWebDriverInstance().switchTo().frame(parentFrame);
-        return Singleton.getWebDriverInstance().findElement(messageFrame).getText();
+        WebElement parentFrame = getWebDriverInstance().findElement(frame);
+        getWebDriverInstance().switchTo().frame(parentFrame);
+        return getWebDriverInstance().findElement(messageFrame).getText();
 
     }
 
     public String getMassageChildFrame() {
-        WebElement childIframe = Singleton.getWebDriverInstance().findElement(iframe);
-        Singleton.getWebDriverInstance().switchTo().frame(childIframe);
-        return Singleton.getWebDriverInstance().findElement(messageIframe).getText();
+        WebElement childIframe = getWebDriverInstance().findElement(iframe);
+        getWebDriverInstance().switchTo().frame(childIframe);
+        return getWebDriverInstance().findElement(messageIframe).getText();
     }
 }

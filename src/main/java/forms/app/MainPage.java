@@ -16,6 +16,7 @@ public class MainPage extends BaseForm {
     }
 
     public void clickBtnAlertFrameWindows() {
+
         btnAlertFrameWindows.click();
     }
 

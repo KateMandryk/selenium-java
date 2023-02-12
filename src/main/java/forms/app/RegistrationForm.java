@@ -1,9 +1,9 @@
 package forms.app;
 
-import org.openqa.selenium.By;
 import forms.base.BaseForm;
 import forms.base.Button;
 import forms.base.TextBox;
+import org.openqa.selenium.By;
 
 public class RegistrationForm extends BaseForm {
     private static final By locator = By.id("registration-form-modal");
@@ -17,37 +17,37 @@ public class RegistrationForm extends BaseForm {
     private final Button btnSubmit = new Button(By.id("submit"), "Button Submit");
 
     public RegistrationForm() {
-        super(locator,name);
+        super(locator, name);
     }
 
-    public void typeTextFirstName(String params1) {
+    public void typeTextFirstName(String name) {
 
-        txbFirstName.typeText(params1);
+        txbFirstName.typeText(name);
     }
 
-    public void typeTextLastName(String params2) {
+    public void typeTextLastName(String lastName) {
 
-        txbLastName.typeText(params2);
+        txbLastName.typeText(lastName);
     }
 
-    public void typeTextEmail(String params3) {
+    public void typeTextEmail(String email) {
 
-        txbEmail.typeText(params3);
+        txbEmail.typeText(email);
     }
 
-    public void typeAge(String params4) {
+    public void typeAge(String age) {
 
-        txbAge.typeText(params4);
+        txbAge.typeText(age);
     }
 
-    public void typeSalary(String params5) {
+    public void typeSalary(String salary) {
 
-        txbSalary.typeText(params5);
+        txbSalary.typeText(salary);
     }
 
-    public void typeDepartment(String params6) {
+    public void typeDepartment(String department) {
 
-        txbDepartment.typeText(params6);
+        txbDepartment.typeText(department);
     }
 
     public void clickSubmit() {

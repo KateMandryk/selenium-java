@@ -1,13 +1,13 @@
 package forms.app;
 
-import org.openqa.selenium.By;
 import forms.base.BaseForm;
 import forms.base.Button;
 import forms.base.TextBox;
+import org.openqa.selenium.By;
 
 public class AlertsPage extends BaseForm {
     private final static String name = "Alerts";
-    private final static By locator = By.className("main-header");
+    private final static By locator = By.xpath("//div[contains(@class,'main-header') and contains(text(),'Alerts')]");
     private final Button btnConfirm = new Button(By.id("confirmButton"), "Button confirm box will appear");
     private final Button btnAlert = new Button(By.id("alertButton"), "Button to see alert");
     private final Button btnPrompt = new Button(By.id("promtButton"), "Button prompt box will appear");

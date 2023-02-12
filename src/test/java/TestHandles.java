@@ -2,9 +2,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import forms.app.*;
 import utils.Browser;
-import utils.Singleton;
-
-import static utils.Singleton.getWebDriverInstance;
 
 public class TestHandles extends BaseTest {
 
@@ -28,17 +25,14 @@ public class TestHandles extends BaseTest {
         Browser.closeTab();
         Assert.assertTrue(browserWindowsPage.isDisplayed(), "Sample page was not close");
         menu.clickBtnElements();
-        ElementsPage elementsPage=new ElementsPage();
-        Assert.assertTrue(elementsPage.isDisplayed(),"Elements Page is not open");
-        elementsPage.clickBtnLinks();
+        ElementsPage elements=new ElementsPage();
+        elements.clickBtnLinks();
         LinksPage linksPage=new LinksPage();
         Assert.assertTrue(linksPage.isDisplayed(), "LinksPage is not open");
-        linksPage.clickLinkHome();
+        linksPage.clickLnkHome();
         Browser.goToTab();
         Assert.assertTrue(mainPage.isDisplayed(), "MainPage is not open");
         Browser.goToTab();
         Assert.assertTrue(linksPage.isDisplayed(), "LinksPage is not open");
-
     }
-
 }

@@ -19,13 +19,10 @@ public class BaseTest {
         log.info("Browser ready...");
         getWebDriverInstance();
         Browser.getURL(reader.getUrl());
-
     }
 
     @AfterTest
     public void close() {
         Singleton.closeWebBrowser();
     }
-
-
 }

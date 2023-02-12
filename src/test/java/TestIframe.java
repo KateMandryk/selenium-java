@@ -28,9 +28,5 @@ public class TestIframe extends BaseTest {
         FramesPage framesPage= new FramesPage();
         Assert.assertTrue(framesPage.isDisplayed(), "FramesPage is not open");
         Assert.assertEquals(framesPage.getTextLowerCase(),framesPage.getTextUpperCase());
-
-
-
     }
-
 }

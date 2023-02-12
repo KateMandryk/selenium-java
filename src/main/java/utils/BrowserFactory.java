@@ -13,11 +13,12 @@ import static org.openqa.selenium.remote.BrowserType.CHROME;
 import static org.openqa.selenium.remote.BrowserType.FIREFOX;
 
 public class BrowserFactory {
-    private final ConfigFileReader  configFileReader=new ConfigFileReader();
+    private final ConfigFileReader configFileReader=new ConfigFileReader();
 
     public WebDriver getWebDriver(){
 
         switch (configFileReader.getBrowser().toUpperCase()){
+
             case "CHROME":
                 WebDriverManager.chromedriver().setup();
                return new ChromeDriver();

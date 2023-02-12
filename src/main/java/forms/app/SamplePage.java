@@ -1,15 +1,14 @@
 package forms.app;
 
-import org.openqa.selenium.By;
 import forms.base.BaseForm;
+import org.openqa.selenium.By;
 
 public class SamplePage extends BaseForm {
-    private static By locator = By.id("sampleHeading");
-    private static String name = "This is a sample page";
+    private static final By locator = By.id("sampleHeading");
+    private static final String name = "This is a sample page";
 
     public SamplePage() {
-        super(locator,name);
-
+        super(locator, name);
     }
 }
 

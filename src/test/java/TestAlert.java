@@ -39,8 +39,5 @@ public class TestAlert extends BaseTest {
         String actualMassage=Browser.typeTextToAlert();
         Browser.acceptAlert();
         Assert.assertEquals(alerts.getTextPromptResult(),"You entered "+ actualMassage,"Massage is not presented on the page or massage content does not match the entered massage ");
-
-
     }
-
 }

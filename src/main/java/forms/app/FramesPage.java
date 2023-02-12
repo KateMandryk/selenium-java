@@ -15,12 +15,13 @@ public class FramesPage extends BaseForm {
     }
 
     public String getTextLowerCase() {
-       return txbFromLowerCase.getText();
 
+       return txbFromLowerCase.getText();
     }
 
     public String getTextUpperCase() {
-      return txbFromUpperCase.getText();
+
+        return txbFromUpperCase.getText();
     }
 
 }
