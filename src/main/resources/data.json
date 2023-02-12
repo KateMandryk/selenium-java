@@ -1,0 +1,8 @@
+{"NamePageAlertsWindows":"Alerts, Frame & Windows",
+"TitleMainPage":"ToolsQA",
+"Massage":"You selected Ok",
+"AlertMassageClickButton":"You clicked a button",
+"AlertMassageConfirmAction":"Do you confirm action?",
+"AlertMassageEnterName":"Please enter your name",
+"Frame":"Parent frame",
+"IFrame":"Child Iframe" }
