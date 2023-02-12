@@ -19,10 +19,12 @@ public class AlertsPage extends BaseForm {
     }
 
     public void clickBtnAlert() {
+
         btnAlert.click();
     }
 
     public void clickBtnConfirm() {
+
         btnConfirm.click();
     }
 
