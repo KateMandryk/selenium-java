@@ -15,11 +15,10 @@ public class ElementsPage extends BaseForm {
     }
 
     public void clickBtnWebTables(){
-
         btnWebTables.click();
     }
-    public void clickBtnLinks(){
 
+    public void clickBtnLinks(){
         btnLinks.click();
     }
 }

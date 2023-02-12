@@ -11,6 +11,4 @@ public class AlertsFrameWindowsPage extends BaseForm {
     public AlertsFrameWindowsPage() {
        super(locator,name);
     }
-
-
 }

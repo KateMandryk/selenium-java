@@ -58,8 +58,5 @@ public class FileReaderUtils {
             e.printStackTrace();
         }
         return config;
-
     }
-
 }
-

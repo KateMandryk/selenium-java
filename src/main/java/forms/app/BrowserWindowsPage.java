@@ -15,7 +15,6 @@ public class BrowserWindowsPage extends BaseForm {
     }
 
     public void clickTabButton(){
-
         btnTab.click();
     }
 }

@@ -19,27 +19,22 @@ public class AlertsPage extends BaseForm {
     }
 
     public void clickBtnAlert() {
-
         btnAlert.click();
     }
 
     public void clickBtnConfirm() {
-
         btnConfirm.click();
     }
 
     public String getTextConfirmResult() {
-
         return confirmResult.getText();
     }
 
     public void clickBtnPrompt() {
-
         btnPrompt.click();
     }
 
     public String getTextPromptResult() {
-
         return promptResult.getText();
     }
 }

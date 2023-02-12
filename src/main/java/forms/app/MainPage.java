@@ -1,8 +1,8 @@
 package forms.app;
 
-import org.openqa.selenium.By;
 import forms.base.BaseForm;
 import forms.base.Button;
+import org.openqa.selenium.By;
 
 
 public class MainPage extends BaseForm {
@@ -12,21 +12,14 @@ public class MainPage extends BaseForm {
     private final Button btnElements = new Button(By.xpath("//div[@class='card-body']//h5[contains(text(),'Elements')]"), "Button Elements");
 
     public MainPage() {
-        super(locator,name);
+        super(locator, name);
     }
 
     public void clickBtnAlertFrameWindows() {
-
         btnAlertFrameWindows.click();
     }
 
     public void clickBtnElements() {
         btnElements.click();
     }
-
 }
-
-
-
-
-

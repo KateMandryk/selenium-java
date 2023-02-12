@@ -21,37 +21,30 @@ public class RegistrationForm extends BaseForm {
     }
 
     public void typeTextFirstName(String name) {
-
         txbFirstName.typeText(name);
     }
 
     public void typeTextLastName(String lastName) {
-
         txbLastName.typeText(lastName);
     }
 
     public void typeTextEmail(String email) {
-
         txbEmail.typeText(email);
     }
 
     public void typeAge(String age) {
-
         txbAge.typeText(age);
     }
 
     public void typeSalary(String salary) {
-
         txbSalary.typeText(salary);
     }
 
     public void typeDepartment(String department) {
-
         txbDepartment.typeText(department);
     }
 
     public void clickSubmit() {
-
         btnSubmit.click();
     }
 }

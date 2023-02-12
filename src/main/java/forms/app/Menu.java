@@ -19,27 +19,22 @@ public class Menu extends BaseForm {
 
 
     public void clickBtnAlert() {
-
         btnAlert.click();
     }
 
     public void clickBtnNestedFrames() {
-
         btnNestedFrames.click();
     }
 
     public void clickBtnBrowserWindows() {
-
         btnBrowserWindows.click();
     }
 
     public void clickBtnElements() {
-
         btnElements.click();
     }
 
     public void clickBtnFrames() {
-
         btnFrames.click();
     }
 }

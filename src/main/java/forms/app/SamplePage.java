@@ -11,5 +11,3 @@ public class SamplePage extends BaseForm {
         super(locator, name);
     }
 }
-
-

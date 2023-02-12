@@ -20,7 +20,6 @@ public class WebTablesPage extends BaseForm {
 
     public WebTablesPage() {
         super(locator,name);
-
     }
 
    public void clickButtonAdd() {

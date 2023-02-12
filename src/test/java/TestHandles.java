@@ -5,10 +5,8 @@ import utils.Browser;
 
 public class TestHandles extends BaseTest {
 
-
     @Test
     public void testHandles()  {
-
         MainPage mainPage=new MainPage();
         Assert.assertTrue(mainPage.isDisplayed(), "MainPage is not open");
         mainPage.clickBtnAlertFrameWindows();
