@@ -69,7 +69,7 @@ public class TestTables extends BaseTest {
         Assert.assertEquals(webTablesPage.getTable().get(indexUser).getSalary(), salary, "Salary has not appeared in a table");
         Assert.assertEquals(webTablesPage.getTable().get(indexUser).getDepartment(), department, "Department has not appeared in a table");
         webTablesPage.clickButtonDelete();
-        log.info("Step 6 ::Click button delete added information to the table and check result");
+        log.info("Step 6 ::Click button delete, delete added information to the table");
         Assert.assertNotEquals(numberOfUsers, webTablesPage.getNumberOfUsers(), "After deleting a user, the number of records in the table has not changed.");
         Assert.assertNotEquals(webTablesPage.getTable().get(indexUser).getName(), userName, "User information has not deleted");
     }
