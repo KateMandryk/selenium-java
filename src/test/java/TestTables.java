@@ -36,15 +36,19 @@ public class TestTables extends BaseTest {
     }
 
     @Test(dataProvider = "User")
-    public void testTables(String name, String lastName, String email, String age, String salary, String department) throws IOException {
+    public void testTables(String name, String lastName, String email, String age, String salary, String department)  {
+        log.info("Step 1 :: Navigate to main page");
         MainPage mainPage = new MainPage();
         Assert.assertTrue(mainPage.isDisplayed(), "Main Page is not opened");
+        log.info("Step 2 :: Click button Elements, navigate to Elements Page");
         mainPage.clickBtnElements();
         ElementsPage elementsPage = new ElementsPage();
         Assert.assertTrue(elementsPage.isDisplayed(), "Elements Page is not open");
+        log.info("Step 3 :: Click button Web Table, navigate to Web Table page");
         elementsPage.clickBtnWebTables();
         WebTablesPage webTablesPage = new WebTablesPage();
         Assert.assertTrue(webTablesPage.isDisplayed(), "WebTables Page is not opened");
+        log.info("Step 4 :: click button add, open Registration Form, add information in Registration Form");
         webTablesPage.clickButtonAdd();
         RegistrationForm form = new RegistrationForm();
         Assert.assertTrue(form.isDisplayed(), "Registration Form is not opened");
@@ -55,6 +59,7 @@ public class TestTables extends BaseTest {
         form.typeSalary(salary);
         form.typeDepartment(department);
         form.clickSubmit();
+        log.info("Step 5 :: Close form and check added information to the table on WebTables Page ");
         int numberOfUsers = webTablesPage.getNumberOfUsers();
         String userName = webTablesPage.getTable().get(indexUser).getName();
         Assert.assertEquals(webTablesPage.getTable().get(indexUser).getName(), name, "FirstName has not appeared in a table");
@@ -64,6 +69,7 @@ public class TestTables extends BaseTest {
         Assert.assertEquals(webTablesPage.getTable().get(indexUser).getSalary(), salary, "Salary has not appeared in a table");
         Assert.assertEquals(webTablesPage.getTable().get(indexUser).getDepartment(), department, "Department has not appeared in a table");
         webTablesPage.clickButtonDelete();
+        log.info("Step 6 ::Click button delete added information to the table and check result");
         Assert.assertNotEquals(numberOfUsers, webTablesPage.getNumberOfUsers(), "After deleting a user, the number of records in the table has not changed.");
         Assert.assertNotEquals(webTablesPage.getTable().get(indexUser).getName(), userName, "User information has not deleted");
     }

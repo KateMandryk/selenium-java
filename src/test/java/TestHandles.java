@@ -20,12 +20,12 @@ public class TestHandles extends BaseTest {
         log.info("Step 4 :: Navigate to Browser Windows page");
         BrowserWindowsPage browserWindowsPage=new BrowserWindowsPage();
         Assert.assertTrue(browserWindowsPage.isDisplayed(), "BrowserWindowsPage is not open");
-        log.info("Step 5 ::Click button New Tab, navigate to tab Sample page");
+        log.info("Step 5 :: Click button New Tab, navigate to tab Sample page");
         browserWindowsPage.clickTabButton();
         SamplePage samplePage=new SamplePage();
         Browser.goToTab();
         Assert.assertEquals(samplePage.isFormOpen(),samplePage.getName(),"Sample page is not open");
-        log.info("Step 6 ::Close tab Sample page");
+        log.info("Step 6 :: Close tab Sample page");
         Browser.closeTab();
         Assert.assertTrue(browserWindowsPage.isDisplayed(), "Sample page was not close");
         log.info("Step 7 :: Navigate to left menu and click button Elements");
@@ -36,7 +36,7 @@ public class TestHandles extends BaseTest {
         LinksPage linksPage=new LinksPage();
         Assert.assertTrue(linksPage.isDisplayed(), "LinksPage is not open");
         linksPage.clickLnkHome();
-        log.info("Step 8 :: Click link Home, navigate to tab Main page");
+        log.info("Step 9 :: Click link Home, navigate to tab Main page");
         Browser.goToTab();
         Assert.assertTrue(mainPage.isDisplayed(), "Main Page is not open");
     }
