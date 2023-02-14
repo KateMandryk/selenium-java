@@ -11,7 +11,7 @@ import utils.Singleton;
 import static utils.Singleton.getWebDriverInstance;
 
 public class BaseTest {
-    private final Logger log = LogManager.getLogger();
+    public Logger log = LogManager.getLogger();
 
     @BeforeMethod
     public void setUp() {

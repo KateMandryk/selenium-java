@@ -18,22 +18,29 @@ public class TestAlert extends BaseTest {
 
     @Test
     public void testAlert()  {
+        log.info("Step 1 :: Navigate to main page");
         MainPage mainPage=new MainPage();
         Assert.assertTrue(mainPage.isDisplayed(), "Page is not open");
         mainPage.clickBtnAlertFrameWindows();
-        AlertsFrameWindowsPage alertsWindows=new AlertsFrameWindowsPage();
-        Assert.assertTrue(alertsWindows.isDisplayed(),"Page is not open");
+        log.info("Step 2 :: Navigate to main page Alerts, Frame & Windows Page");
+        AlertsFrameWindowsPage alertsFrameWindowsPage=new AlertsFrameWindowsPage();
+        Assert.assertTrue(alertsFrameWindowsPage.isDisplayed(),"Page is not open");
         Menu menu=new Menu();
+        log.info("Step 3 :: Navigate to left menu and click button Alerts");
         menu.clickBtnAlert();
+        log.info("Step 4 :: Navigate to Alerts Page");
         AlertsPage alerts=new AlertsPage();
         Assert.assertTrue(alerts.isDisplayed(),"Page is not open");
+        log.info("Step 5 :: Click button Alert and accept alert");
         alerts.clickBtnAlert();
         Assert.assertEquals(Browser.getTextAlert(),alertClickButton,"Alert with massage\"You clicked a button\" is not open");
         Browser.acceptAlert();
+        log.info("Step 6 :: Click button Confirm and accept alert");
         alerts.clickBtnConfirm();
         Assert.assertEquals(Browser.getTextAlert(),alertMassageConfirmAction,"Alert with massage\"Do you confirm action?\" is not open");
         Browser.acceptAlert();
         Assert.assertEquals(alerts.getTextConfirmResult(),message,"Massage\"You selected Ok\" is not present  on the page");
+        log.info("Step 7 :: Click button Prompt and type message to alert, accept alert");
         alerts.clickBtnPrompt();
         Assert.assertEquals(Browser.getTextAlert(),alertMassageEnterName,"Alert with massage\"Please enter your name\" is not open");
         String actualMassage=Browser.typeTextToAlert();
