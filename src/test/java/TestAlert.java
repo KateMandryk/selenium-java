@@ -22,7 +22,7 @@ public class TestAlert extends BaseTest {
         MainPage mainPage=new MainPage();
         Assert.assertTrue(mainPage.isDisplayed(), "Page is not open");
         mainPage.clickBtnAlertFrameWindows();
-        log.info("Step 2 ::click button Alerts, Frame & Windows, navigate to Alerts, Frame & Windows Page");
+        log.info("Step 2 :: Click button Alerts, Frame & Windows, navigate to Alerts, Frame & Windows Page");
         AlertsFrameWindowsPage alertsFrameWindowsPage=new AlertsFrameWindowsPage();
         Assert.assertTrue(alertsFrameWindowsPage.isDisplayed(),"Page is not open");
         Menu menu=new Menu();

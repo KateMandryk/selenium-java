@@ -15,7 +15,7 @@ public class TestIframe extends BaseTest {
         log.info("Step 1 :: Navigate to main page");
         MainPage mainPage=new MainPage();
         Assert.assertTrue(mainPage.isDisplayed(), "MainPage is not open");
-        log.info("Step 2 ::click button Alerts, Frame & Windows, navigate to Alerts, Frame & Windows Page");
+        log.info("Step 2 :: Click button Alerts, Frame & Windows, navigate to Alerts, Frame & Windows Page");
         mainPage.clickBtnAlertFrameWindows();
         AlertsFrameWindowsPage alertsWindowsPage=new AlertsFrameWindowsPage();
         Assert.assertTrue(alertsWindowsPage.isDisplayed(),"AlertsWindowsPage is not open");

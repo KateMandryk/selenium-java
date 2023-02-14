@@ -39,7 +39,7 @@ public abstract class BaseElement {
     }
 
     public void typeText(String text) {
-        log.info(name+ ":: Typing");
+        log.info(name+ ":: Typing "+ text);
         getElement().sendKeys(text);
 
     }

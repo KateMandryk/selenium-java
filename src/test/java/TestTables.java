@@ -6,7 +6,6 @@ import forms.app.MainPage;
 import forms.app.RegistrationForm;
 import forms.app.WebTablesPage;
 import utils.FileReaderUtils;
-import java.io.IOException;
 
 
 public class TestTables extends BaseTest {
@@ -48,7 +47,7 @@ public class TestTables extends BaseTest {
         elementsPage.clickBtnWebTables();
         WebTablesPage webTablesPage = new WebTablesPage();
         Assert.assertTrue(webTablesPage.isDisplayed(), "WebTables Page is not opened");
-        log.info("Step 4 :: click button add, open Registration Form, add information in Registration Form");
+        log.info("Step 4 :: Click button add, open Registration Form, add information in Registration Form");
         webTablesPage.clickButtonAdd();
         RegistrationForm form = new RegistrationForm();
         Assert.assertTrue(form.isDisplayed(), "Registration Form is not opened");
