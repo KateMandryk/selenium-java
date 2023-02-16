@@ -20,15 +20,15 @@ public class RegistrationForm extends BaseForm {
         super(locator, name);
     }
 
-    public void typeTextFirstName(String name) {
+    public void typeFirstName(String name) {
         txbFirstName.typeText(name);
     }
 
-    public void typeTextLastName(String lastName) {
+    public void typeLastName(String lastName) {
         txbLastName.typeText(lastName);
     }
 
-    public void typeTextEmail(String email) {
+    public void typeEmail(String email) {
         txbEmail.typeText(email);
     }
 

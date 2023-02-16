@@ -51,9 +51,9 @@ public class TestTables extends BaseTest {
         webTablesPage.clickButtonAdd();
         RegistrationForm form = new RegistrationForm();
         Assert.assertTrue(form.isDisplayed(), "Registration Form is not opened");
-        form.typeTextFirstName(name);
-        form.typeTextLastName(lastName);
-        form.typeTextEmail(email);
+        form.typeFirstName(name);
+        form.typeLastName(lastName);
+        form.typeEmail(email);
         form.typeAge(age);
         form.typeSalary(salary);
         form.typeDepartment(department);
