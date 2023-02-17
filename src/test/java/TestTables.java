@@ -1,11 +1,17 @@
 import forms.app.ElementsPage;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import forms.app.MainPage;
 import forms.app.RegistrationForm;
 import forms.app.WebTablesPage;
+import utils.Browser;
 import utils.FileReaderUtils;
+
+import java.io.File;
 
 
 public class TestTables extends BaseTest {
@@ -57,6 +63,7 @@ public class TestTables extends BaseTest {
         form.typeAge(age);
         form.typeSalary(salary);
         form.typeDepartment(department);
+        Browser.getScreenshot();
         form.clickSubmit();
         log.info("Step 5 :: Close form and check added information to the table on WebTables Page ");
         int numberOfUsers = webTablesPage.getNumberOfUsers();
