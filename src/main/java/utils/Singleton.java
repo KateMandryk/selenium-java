@@ -9,13 +9,13 @@ public class Singleton {
     private static final Logger log = LogManager.getLogger();
     private static WebDriver driver;
 
-    public Singleton() {
+    private Singleton() {
     }
 
     public static WebDriver getWebDriverInstance() {
         if (driver == null) {
             BrowserFactory browserFactory = new BrowserFactory();
-            driver = browserFactory.getWebDriver();
+            driver = browserFactory.getWebDriver(BrowserFactory.Browser.CHROME);
         }
         return driver;
     }

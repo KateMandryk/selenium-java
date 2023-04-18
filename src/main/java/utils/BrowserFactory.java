@@ -10,31 +10,38 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
 
-import static org.openqa.selenium.remote.BrowserType.CHROME;
-import static org.openqa.selenium.remote.BrowserType.FIREFOX;
+import static org.openqa.selenium.remote.BrowserType.*;
 
 public class BrowserFactory {
+
+    public enum Browser {
+        CHROME,
+        FIREFOX,
+        EDGE,
+        OPERA
+    }
+
     private final ConfigFileReader configFileReader=new ConfigFileReader();
 
-    public WebDriver getWebDriver(){
+    public WebDriver getWebDriver(Browser browser){
 
-        switch (configFileReader.getBrowser().toUpperCase()){
+        switch (browser){
 
-            case "CHROME":
+            case CHROME:
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions options=new ChromeOptions();
-                options.addArguments("--headless");
+                options.addArguments("--remote-allow-origins=*");
                 return new ChromeDriver(options);
 
-            case "FIREFOX":
+            case FIREFOX:
                 WebDriverManager.firefoxdriver().setup();
                 return new FirefoxDriver();
 
-            case "EDGE":
+            case EDGE:
                 WebDriverManager.edgedriver().setup();
                return new EdgeDriver();
 
-            case "OPERA":
+            case OPERA:
                 WebDriverManager.operadriver().setup();
                 return new OperaDriver();
 

@@ -22,7 +22,7 @@ public class BaseTest {
     }
 
     @AfterTest
-    public void close() {
+    public void tearDown() {
         Singleton.closeWebBrowser();
     }
 }
